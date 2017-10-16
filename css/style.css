@@ -1,0 +1,381 @@
+@charset "utf-8"; /*文字コード指定：*/
+
+@import 'https://fonts.googleapis.com/css?family=Abel'; /*google fontのCSS読み込み*/
+
+/*基本設定*/
+html
+{
+  font-size: 62.5%; /*ベースのフォントサイズ：全体を10pxに統一する*/
+}
+
+body
+{
+    font-family: Abel, '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; /*フォントの種類*/
+    font-size: 1.4rem; /*ベースのフォントサイズから140%*/
+    line-height: 1.6; /*行間*/
+    letter-spacing: .1em; /*文字間：基本は1em*/
+    color: #4c4c4c; /*文字色*/
+    background-color: #fdfcf6; /*背景色*/
+}
+
+
+/*headerメールアイコンの設定*/
+.button-contact
+{
+  font-size: 20px; /*フォント（アイコン）サイズ*/
+  line-height: 0; /*行の高さ：高さがあると垂直方向に中央にならないので0*/
+  
+  display: block; /*ブロック要素として扱う*/
+  float: right; /*要素（ボックス自体）を右寄せ*/
+  
+  width: 20px; /*幅*/
+  height: 20px; /*高さ*/
+  margin: 20px 20px 0 0; /*要素外側の余白：上 右 下 左*/
+  padding: 10px; /*要素内側の余白*/
+  
+  text-align: center; /*ボックスの中で中央揃え*/
+  
+  color: #4c4c4c; /*文字色*/
+  border: 2px solid #4c4c4c; /*枠線：太さ 線の種類（通常の線） 色*/
+  /*ボックスの角を丸くする*/
+  -webkit-border-radius: 4px; /*Firefox用*/
+     -moz-border-radius: 4px; /*Chrome、Safari用*/
+          border-radius: 4px; /*今後のため必ずベンダープレフィックスなしも併記する！*/
+}
+
+
+/*テキストを大文字で表記する：,で区切れば複数指定可能*/
+.uppercase,
+section h2,
+#skills h3,
+#works .works-box a .works-box-inner .button-readmore
+{
+    text-transform: uppercase;
+}
+
+
+/*テキストを中央揃えにする*/
+.text-center {
+    text-align: center;
+}
+
+
+/*Google Fontsを使用*/
+.abel,
+section h2,
+#works .works-box a .works-box-inner .button-readmore
+{
+    font-family: 'Abel', sans-serif;
+}
+
+
+/*headerに関する設定*/
+header .profile
+{
+    clear: both; /*メールボタンのfloatを解除*/
+
+    width: 60%;
+    margin: 0 auto; /*ボックスの中央寄せ：ボックス自体を中央寄せするときはauto*/
+    padding: 60px 0; /*上下　左右*/
+}
+header .site-title /*名前の部分*/
+{
+    font-size: 1.8rem;
+    line-height: normal;
+}
+header .site-title span /*Web Designerと名前の部分*/
+{
+    font-size: 4.2rem;
+    
+    display: block; /*インライン要素の<span>を改行するためにブロック要素にする*/
+    
+    color: #AD9D00;
+}
+
+/*インライン要素をブロック要素にして中央寄せ*/
+.block-center,
+section .container,
+#skills i
+{
+    display: block;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*プロフィールアイコンの設定*/
+header .profile-icon
+{
+    margin: 30px auto;
+
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+}
+
+/*自己紹介文の設定*/
+header p
+{
+    font-size: 1.6rem;
+}
+
+/*Skills, Works, Contact共通の設定*/
+section
+{
+    padding: 60px 0; /*section内側余白*/
+}
+section .container /*section内のインナーボックスの設定*/
+{
+    width: 90%;
+}
+section h2 /*section内の見出し*/
+{
+    font-size: 3.2rem;
+}
+
+/*Skills内の設定*/
+#skills
+{
+    background-color: #191970;
+}
+#skills .container
+{
+    display: -webkit-flex; /*Flexboxを使うと自動で一番高いボックスに合わせてくれる*/
+    display:         flex;
+
+    justify-content: space-between; /*両端の要素を固定、その間にある要素を等間隔で配置*/
+}
+#skills h2
+{
+    margin-bottom: 60px;
+    color: #fdfcf6;
+}
+
+/*Skills内のインナーボックスskill-boxの設定*/
+#skills .skill-box
+{
+    -webkit-box-sizing: border-box; /*計算方法がボーダーからボーダーまでの幅になる*/
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-flex: 1;　/*Flexboxで配置したときに横幅を指定する*/
+            flex: 1;
+    margin: 0px 10px;
+    padding: 20px;
+
+    -webkit-border-radius: 4px;　/*インナーボックスの角の丸み*/
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background-color: #fdfcf6;
+}
+
+/*インナーボックス内のアイコンと見出しの設定*/
+#skills i
+{
+    font-size: 4.5rem;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+
+    text-align: center;
+
+    color: #fff;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #AD9D00;
+}
+#skills h3
+{
+    font-size: 2.4rem;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+    color: #AD9D00;
+}
+
+/*worksに関する設定*/
+#works /*全体*/
+{
+    padding-bottom: 0;
+}
+
+#works h2 /*全体の見出し*/
+{
+    margin-bottom: 50px;
+}
+
+#works .works-box /*業績1つ分*/
+{
+    float: left;
+
+    width: 33.33333%;
+    height: 100%;
+}
+
+#works::after /*clearfixの適用???*/
+{
+    display: block;
+    clear: both;
+
+    content: '';
+}
+
+/*works-box-innerをロールオーバーで表示させるときの設定*/
+#works .works-box a
+{
+    position: relative; /*<a>タグが基準となる*/
+
+    display: block;
+}
+#works .works-box a .works-box-inner
+{
+    position: absolute; /*<a>タグ（position: relativeの左上を基準する）*/
+    top: 0;
+    left: 0;
+
+    display: none; /*これにより何もしなければ見えなくなる*/
+
+    height: 100%;
+
+    color: #fff;
+    background-color: rgba(0, 0, 0, .7); /*RGBAカラー、明度を指定できる（ここでは70%）*/
+}
+
+#works .works-box a .works-box-inner div
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 40%;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+#works .works-box a .works-box-inner h3
+{
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    margin: 0 0 5px;
+}
+#works .works-box a .works-box-inner small
+{
+    font-size: 1rem;
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+#works .works-box a .works-box-inner .button-readmore
+{
+    font-size: 1rem;
+    font-weight: bold;
+
+    display: block;
+
+    width: 180px;
+    margin: auto;
+    padding: 5px 0;
+
+    text-align: center;
+
+    color: #fff;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background-color: #14c0c9;
+}
+#works .works-box img
+{
+    display: block;
+
+    max-width: 100%;
+}
+
+/*ロールオーバーの設定:ロールオーバーのために擬似クラス「:hover」を使う。*/
+#works .works-box a:hover .works-box-inner
+{
+    display: block; /*カーソルオンにすることでworks-box-innerがブロック要素になり可視化される*/
+
+    width: 100%;
+}
+
+/*Read Moreボタンのロールオーバー設定*/
+#works .works-box a .works-box-inner .button-readmore:hover
+{
+    background-color: #0f949b;
+}
+
+/*contactの設定*/
+#contact ul
+{
+    margin-top: 60px;
+
+    text-align: center;
+}
+#contact ul li
+{
+    font-size: 2.8rem;
+
+    display: inline-block;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-right: 20px;
+
+    text-align: center;
+    vertical-align: top;
+}
+#contact ul li:last-child
+{
+    margin-right: 0;
+}
+
+#contact ul .github,
+#contact ul .skype
+{
+    font-size: 3.2rem;
+}
+#contact ul .github i
+{
+    margin-left: 2px;
+}
+
+#contact ul a
+{
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    color: #fff;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #AD9D00;
+}
+#contact ul a:hover
+{
+    background-color: #0f949b;
+}
+
+/*footerの設定*/
+footer
+{
+    padding: 10px 0;
+
+    text-align: center;
+
+    color: #fff;
+    background-color: #191970;
+}
