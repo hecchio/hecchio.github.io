@@ -292,7 +292,7 @@ section h2 /*section内の見出し*/
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
             border-radius: 4px;
-    background-color: #14c0c9;
+    background-color: #AD9D00;
 }
 #works .works-box img
 {
@@ -312,7 +312,7 @@ section h2 /*section内の見出し*/
 /*Read Moreボタンのロールオーバー設定*/
 #works .works-box a .works-box-inner .button-readmore:hover
 {
-    background-color: #0f949b;
+    background-color: #6B6100;
 }
 
 /*contactの設定*/
@@ -342,7 +342,7 @@ section h2 /*section内の見出し*/
 }
 
 #contact ul .github,
-#contact ul .skype
+#contact ul .twitter
 {
     font-size: 3.2rem;
 }
@@ -366,7 +366,7 @@ section h2 /*section内の見出し*/
 }
 #contact ul a:hover
 {
-    background-color: #0f949b;
+    background-color: #6B6100;
 }
 
 /*footerの設定*/
