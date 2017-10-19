@@ -10,7 +10,7 @@ html
 
 body
 {
-    font-family: Abel, '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; /*フォントの種類*/
+    font-family: '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; /*フォントの種類*/
     font-size: 1.4rem; /*ベースのフォントサイズから140%*/
     line-height: 1.6; /*行間*/
     letter-spacing: .1em; /*文字間：基本は1em*/
@@ -63,6 +63,7 @@ section h2,
 /*Google Fontsを使用*/
 .abel,
 section h2,
+section h3,
 #works .works-box a .works-box-inner .button-readmore
 {
     font-family: 'Abel', sans-serif;
